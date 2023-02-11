@@ -7,8 +7,7 @@ jobs:
     steps:
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}." 
    
-      - name: Installing and caching python
-        uses: actions/cache@v2
+
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}." 
       - uses: actions/setup-python@v4
         with:
