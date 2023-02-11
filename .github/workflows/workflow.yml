@@ -10,13 +10,16 @@ jobs:
     steps:
       - name: Initiating github workflow action
       - name: Installing and caching python
-      - uses: actions/cache@v2
+        uses: actions/cache@v2
 
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}." 
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
           cache: 'pip'
 
       - name: Installing dbt
-        run:  pip install -r ./requirements.txt 
+        run:  |
+          pip install -r ./requirements.txt 
+      - run: echo "🍏 This job's status is ${{ job.status }}."    
         
